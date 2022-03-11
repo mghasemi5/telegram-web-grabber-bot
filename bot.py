@@ -10,17 +10,7 @@ import threading
 
 
 
-def options_eth(update, context):
 
-    context.bot.send_document(chat_id=update.effective_chat.id,document=open(r'C:\Users\mogh77\Desktop\delta_api\pdf\eth.pdf', 'rb'), timeout = 100)
-    context.bot.send_document(chat_id=update.effective_chat.id,
-                              document=open(r'C:\Users\mogh77\Desktop\delta_api\eth.xlsx', 'rb'), timeout=100)
-
-def options_btc(update, context):
-
-    context.bot.send_document(chat_id=update.effective_chat.id,document=open(r'C:\Users\mogh77\Desktop\delta_api\pdf\btc.pdf', 'rb'), timeout = 100)
-    context.bot.send_document(chat_id=update.effective_chat.id,
-                              document=open(r'C:\Users\mogh77\Desktop\delta_api\btc.xlsx', 'rb'), timeout=100)
 
 def tether(update, context):
     open_file = open('tether_price.pkl', "rb")
@@ -50,7 +40,7 @@ def start(update, context):
 try:
 
 
-    updater = Updater(token='2074440411:AAGFrJJWb0w4szfX1QZoIBZu8JgU5dzm_ws')
+    updater = Updater(token='your bot token')
     dispatcher = updater.dispatcher
     logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                          level=logging.INFO)
